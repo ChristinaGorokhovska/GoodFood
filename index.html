@@ -13,8 +13,8 @@
       <div class="first-page__container">
         <header class="header">
           <div class="header__container">
-            <p class="logo"><a href="#">GoodFood</a></p>
-            <nav class="menu">
+            <h2 class="logo"><a href="#">GoodFood</a></h2>
+            <nav class="menu animated">
               <ul class="menu-list">
                 <li><a href="#">About us</a></li>
                 <li><a href="#">Our food</a></li>
@@ -22,7 +22,7 @@
                 <li><a href="#">Reviews</a></li>
               </ul>
             </nav>
-            <div class="social">
+            <div class="social animated">
               <a href="#"><img src="./img/facebook.svg" alt="facebook" /></a>
               <a href="#"><img src="./img/twitter.svg" alt="twitter" /></a>
               <a href="#"><img src="./img/instagram.png" alt="instagram" /></a>
@@ -31,13 +31,13 @@
         </header>
         <div class="main-content">
           <div class="main-content__container">
-            <div class="text-content">
-              <h3>Hello, our client</h3>
+            <div class="text-content animated">
+              <h3 class="animated">Hello, our client</h3>
               <h1>
                 A healthy, balanced, tasty diet is now <span>one click </span>away.
                 <span>We'll make it all up for you</span>
               </h1>
-              <button>Consult us</button>
+              <button data-modal-target="#modal">Consult us</button>
             </div>
             <div class="img"><img src="./img/main-picture.png" alt="main picture" /></div>
           </div>
@@ -46,28 +46,28 @@
     </div>
     <div class="about-us">
       <div class="about-us__container">
-        <div class="img-bananas">
+        <div class="img-bananas animated">
           <img src="./img/bananas.png" alt="bananas" />
         </div>
         <div class="text-content">
-          <h3>About us</h3>
+          <h3 class="animated">About us</h3>
           <h2>
             We are a modern solution to the problems of nutrition and diets. We are engaged in the selection of the diet
             for our clients and the preparation of the most delicious and healthy dishes for them. For each client, we
             individually select a ration at the request of the client. All meals are prepared by highly qualified
             specialists and delivered directly to your hands.
           </h2>
-          <button>Learn more</button>
+          <button class="test">Learn more</button>
         </div>
       </div>
     </div>
     <div class="who-needs-it">
       <div class="who-needs-it__container">
         <div class="text-content">
-          <h3>Who needs it</h3>
+          <h3 class="animated">Who needs it</h3>
           <h2>Our dishes suit almost everyone! We will definitely be able to please you whoever you are</h2>
         </div>
-        <div class="categories-items">
+        <div class="categories-items animated">
           <div class="categories-items__item">
             <img src="./img/item-children.svg" alt="children" />
             <h4>Children</h4>
@@ -107,17 +107,19 @@
             </p>
           </div>
         </div>
-        <button>Consult us</button>
+        <button data-modal-target="#modal">Consult us</button>
       </div>
     </div>
     <div class="discount">
       <div class="text">
-        <h2>Get a discount on the selection <span>of a weekly ration with a</span> <span>discount of -20%</span></h2>
+        <h2 class="animated">
+          Get a discount on the selection <span>of a weekly ration with a</span> <span>discount of -20%</span>
+        </h2>
       </div>
     </div>
     <div class="examples-food">
       <div class="example-food__container">
-        <h3>Examples of our food</h3>
+        <h3 class="animated">Examples of our food</h3>
         <div class="swiper">
           <div class="swiper-wrapper">
             <div class="swiper-slide">
@@ -281,13 +283,13 @@
     <div class="delivery">
       <div class="delivery__container">
         <div class="text-content">
-          <h3>delivery</h3>
+          <h3 class="animated">delivery</h3>
           <h2>
             Our stages of preparation are presented below, and delivery will deliver everything at any time and place
             convenient for you!
           </h2>
         </div>
-        <div class="delivery-items">
+        <div class="delivery-items animated">
           <div class="item">
             <img src="./img/delivery_icon-1.svg" alt="icon1" />
             <h4>Communication</h4>
@@ -312,7 +314,65 @@
         </div>
       </div>
     </div>
+    <div class="consult-us">
+      <div class="consult-us__container">
+        <div class="text-content">
+          <h3 class="animated">Consult us</h3>
+          <h2>Write your information and we will contact you</h2>
+        </div>
+        <div class="form-block">
+          <form action="">
+            <div class="field-wrap"><label for="name">Name</label> <input id="name" type="text" required /></div>
+
+            <div class="field-wrap">
+              <label for="second-name">Second name</label>
+              <input id="second-name" type="text" required />
+            </div>
+
+            <div class="field-wrap">
+              <label for="telephone">Telephone</label>
+              <input id="" telephone type="tel" required />
+            </div>
+
+            <div class="field-wrap"><label for="email">Email</label> <input id="email" type="email" required /></div>
+
+            <button class="animated">Consult us</button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <footer class="footer">
+      <div class="footer__container">
+        <h2 class="animated"><a href="#">GoodFood</a></h2>
+        <p>All rights reversed.</p>
+      </div>
+    </footer>
+
+    <div class="overlay">
+      <div class="modal" id="modal">
+        <form action="">
+          <h2>Write your information and we will contact you</h2>
+          <div class="field-wrap"><label for="name">Name</label> <input id="name" type="text" required /></div>
+
+          <div class="field-wrap">
+            <label for="second-name">Second name</label>
+            <input id="second-name" type="text" required />
+          </div>
+
+          <div class="field-wrap">
+            <label for="telephone">Telephone</label>
+            <input id="" telephone type="tel" required />
+          </div>
+
+          <div class="field-wrap"><label for="email">Email</label> <input id="email" type="email" required /></div>
+
+          <button>Consult us</button>
+        </form>
+      </div>
+    </div>
   </body>
   <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+  <script src="./js/popup.js"></script>
   <script src="./js/swiper.js"></script>
+  <script src="./js/animation.js"></script>
 </html>

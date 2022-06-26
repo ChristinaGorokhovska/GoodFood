@@ -47,6 +47,7 @@ button {
       .logo {
         font-weight: 700;
         font-size: rem(49);
+        color: $black;
         a {
           text-decoration: none;
         }
@@ -64,6 +65,13 @@ button {
             font-size: rem(24);
             font-weight: 500;
             margin-right: 60px;
+            padding: 4px;
+            box-shadow: inset 0 0 0 0 $yellow;
+            transition: box-shadow 0.7s ease-in-out;
+
+            &:hover {
+              box-shadow: inset 200px 0 0 0 $yellow;
+            }
           }
         }
       }
@@ -325,7 +333,7 @@ button {
 
 .delivery {
   margin-top: 200px;
-  background: linear-gradient(180deg, rgba(252, 230, 29, 0) 0%, rgba(252, 230, 29, 0.5) 100%);
+  //background: linear-gradient(180deg, rgba(252, 230, 29, 0) 0%, rgba(252, 230, 29, 0.5) 100%);
 
   .text-content {
     display: flex;
@@ -374,4 +382,186 @@ button {
       }
     }
   }
+}
+
+.consult-us {
+  margin: 196px 0 0 0;
+  padding-bottom: 136px;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.5) 0%, rgba(247, 14, 98, 0.39) 100%);
+  &__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .text-content {
+    text-align: center;
+    h2 {
+      color: $pink;
+      font-size: rem(36);
+      line-height: lh(36, 52);
+      max-width: 750px;
+    }
+  }
+
+  .form-block {
+    margin-top: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 656px;
+    border-radius: 48px;
+    background-color: $white;
+    padding: 42px 36px 44px;
+
+    form {
+      width: 100%;
+      max-width: 456px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      .field-wrap {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 36px;
+      }
+
+      label {
+        align-self: flex-start;
+        font-size: rem(22);
+      }
+
+      input {
+        margin-top: 8px;
+        display: block;
+        width: 100%;
+        //max-width: 456px;
+        border-radius: 50px;
+        background-color: $light-grey;
+        font-size: rem(26);
+        color: $pink;
+        border: none;
+        padding: 12px;
+        text-align: center;
+      }
+
+      button {
+        background: $pink;
+        color: $white;
+        margin: 0 auto;
+      }
+    }
+  }
+}
+
+.footer {
+  &__container {
+    text-align: center;
+    h2 {
+      margin: 72px 0 0 0;
+      font-weight: 700;
+      font-size: rem(49);
+      text-align: center;
+      color: $black;
+      a {
+        text-decoration: none;
+      }
+    }
+
+    p {
+      font-size: rem(22);
+      margin: 36px 0;
+    }
+  }
+}
+
+.modal {
+  max-width: 800px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  background-color: $white;
+  padding: 50px;
+  border-radius: 50px;
+  z-index: 100;
+  form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px 30px;
+
+    h2 {
+      grid-column: span 2;
+      text-align: center;
+      margin-bottom: 32px;
+    }
+    .field-wrap {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 36px;
+    }
+
+    label {
+      align-self: flex-start;
+      font-size: rem(22);
+    }
+
+    input {
+      margin-top: 8px;
+      display: block;
+      width: 100%;
+      //max-width: 456px;
+      border-radius: 50px;
+      background-color: $light-grey;
+      font-size: rem(26);
+      color: $pink;
+      border: none;
+      padding: 12px;
+      text-align: center;
+    }
+
+    button {
+      background: $pink;
+      color: $white;
+      margin: 0 auto;
+      grid-column: span 2;
+    }
+  }
+
+  &.active {
+    transform: translate(-50%, -50%) scale(1);
+    transition: 0.5s all;
+  }
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(214, 50, 50, 0.5);
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.5s all;
+  &.active {
+    opacity: 1;
+    pointer-events: all;
+    transition: 0.5s all;
+    z-index: 100;
+  }
+}
+
+// Animation classes
+.animated {
+  opacity: 0;
+  transition: opacity 1500ms;
+}
+
+.scrolled {
+  opacity: 1;
 }
