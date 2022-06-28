@@ -10,11 +10,13 @@ openModalButtons.forEach((button) => {
   });
 });
 
-overlay.addEventListener("click", () => {
-  const modals = document.querySelectorAll(".modal.active");
-  modals.forEach((modal) => {
-    closeModal(modal);
-  });
+document.addEventListener("click", (e) => {
+  if (e.target === overlay) {
+    const modals = document.querySelectorAll(".modal.active");
+    modals.forEach((modal) => {
+      closeModal(modal);
+    });
+  }
 });
 
 function openModal(modal) {
